@@ -6,10 +6,11 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { color } from 'react-native-elements/dist/helpers';
+import { AsyncStoreMap, AsyncStoreKeys } from '../../constants/AsyncStores';
 
 export default function SettingsScreen() {
 
-    let STORAGE_KEY = '@user_input';
+    let CATEGORIES_KEY = AsyncStoreKeys[AsyncStoreKeys.USER_CATS];
     const [catInput, setCatInput] = React.useState('');
     const [storedCat, setStoredCat] = React.useState('');
 
@@ -19,7 +20,7 @@ export default function SettingsScreen() {
 
     const saveCategory = async () => {
         try {
-            await AsyncStorage.setItem(STORAGE_KEY, catInput)
+            await AsyncStorage.setItem(CATEGORIES_KEY, catInput)
         } catch (e) {
             alert('Failed to save the data to the storage')
         }
@@ -27,7 +28,7 @@ export default function SettingsScreen() {
     
     const readCategory = async () => {
         try {
-            const value = await AsyncStorage.getItem(STORAGE_KEY);
+            const value = await AsyncStorage.getItem(CATEGORIES_KEY);
             if (value !== null) {
                 setStoredCat(value);
             } else {
