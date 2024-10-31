@@ -8,6 +8,6 @@ export enum AsyncStoreKeys {
 }
 
 export const AsyncStoreMap: any = new Map([
-  [AsyncStoreKeys.USER_THEME, '@user_theme'],
-  [AsyncStoreKeys.USER_CATS, '@user_categories']
+  [AsyncStoreKeys.USER_THEME, "@user_theme"],
+  [AsyncStoreKeys.USER_CATS, "@user_categories"]
 ]);

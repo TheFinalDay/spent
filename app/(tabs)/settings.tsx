@@ -10,7 +10,7 @@ import { AsyncStoreMap, AsyncStoreKeys } from '../../constants/AsyncStores';
 
 export default function SettingsScreen() {
 
-    let CATEGORIES_KEY = AsyncStoreKeys[AsyncStoreKeys.USER_CATS];
+    let CATEGORIES_KEY = AsyncStoreMap.get(AsyncStoreKeys.USER_CATS)!;
     const [catInput, setCatInput] = React.useState('');
     const [storedCat, setStoredCat] = React.useState('');
 
