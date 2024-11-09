@@ -4,6 +4,7 @@ import { MaterialCommunityIcon } from '@/components/icons/MaterialCommunityIcon'
 import ScrollView from '@/components/ScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { EmojiPicker } from '@/components/EmojiPicker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { color } from 'react-native-elements/dist/helpers';
 import { AsyncStoreMap, AsyncStoreKeys } from '../../constants/AsyncStores';
@@ -79,6 +80,9 @@ export default function SettingsScreen() {
                     </Pressable>
                 </ThemedView>
             </ThemedView>
+            <Text>
+                <EmojiPicker></EmojiPicker>
+            </Text>
         </ScrollView>
 
     );
