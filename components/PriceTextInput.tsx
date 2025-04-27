@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, type ViewProps, TextInput } from 'react-native';
+import { View, type ViewProps, TextInput, Pressable, Text } from 'react-native';
 import { useThemeColor } from '@/hooks/useThemeColor';
+import ScrollView from './ScrollView';
 
 export type PriceTextInputProps = ViewProps & {
     lightColor?: string;
@@ -32,6 +33,9 @@ export function PriceTextInput({ lightColor, darkColor }: PriceTextInputProps) {
                 fontSize: 30
             }}
         />
+        <Pressable onPress={() => {}}>
+                <Text style={{color: 'green'}}>SPENT!</Text>
+            </Pressable>
     </View>;
 }
 

@@ -1,5 +1,5 @@
-import { StyleSheet, Image, Platform } from 'react-native';
-
+import React from 'react';
+import { StyleSheet, Image, Platform, Pressable } from 'react-native';
 import { PriceTextInput } from '@/components/PriceTextInput';
 import { MaterialCommunityIcon } from '@/components/icons/MaterialCommunityIcon';
 import ScrollView from '@/components/ScrollView';
